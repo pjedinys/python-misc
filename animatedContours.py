@@ -26,6 +26,6 @@ def animate(t):
 ani = animation.FuncAnimation(fig, animate, frames=np.linspace(0, 2*np.pi, 60), blit=False)
 
 writer = animation.PillowWriter(fps=30, bitrate=1800)
-ani.save('contour_animation.gif', writer=writer)
+ani.save("contour_animation.gif", writer=writer)
 
 #plt.show()
