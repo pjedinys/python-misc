@@ -15,12 +15,12 @@ X, Y = np.meshgrid(x, y)
 num_levels = 16
 contour_levels = np.linspace(-2, 2, num_levels)
 
-contour = ax.contour(X, Y, f(X, Y, 0), levels=contour_levels, colors='black', linestyles='solid')
+contour = ax.contour(X, Y, f(X, Y, 0), levels=contour_levels, colors="black", linestyles="solid")
 
 def animate(t):
     Z = f(X, Y, t)
     ax.clear()
-    contour = ax.contour(X, Y, Z, levels=contour_levels, colors='black', linestyles='solid')
+    contour = ax.contour(X, Y, Z, levels=contour_levels, colors="black", linestyles="solid")
     return contour
 
 ani = animation.FuncAnimation(fig, animate, frames=np.linspace(0, 2*np.pi, 60), blit=False)
